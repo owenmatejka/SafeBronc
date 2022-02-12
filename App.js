@@ -12,6 +12,14 @@ function HomeScreen() {
   )
 }
 
+function ResourceScreen() {
+  return (
+    <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Resources</Text>
+    </View>
+  )
+}
+
 const Tab = createBottomTabNavigator()
 
 export default function App() {
@@ -21,6 +29,10 @@ export default function App() {
         <Tab.Screen
         name = "Home"
         component = {HomeScreen}
+        />
+        <Tab.Screen
+        name = "Resources"
+        component = {ResourceScreen}
         />
       </Tab.Navigator>
     </NavigationContainer>
