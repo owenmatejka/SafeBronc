@@ -4,23 +4,10 @@ import * as React from  'react';
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-function HomeScreen() {
-  return (
-    <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home</Text>
-    </View>
-  )
-}
+HomeScreen = require('./Navigation/Home');
+ResourceScreen = require('./Navigation/Resources');
 
-function ResourceScreen() {
-  return (
-    <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Resources</Text>
-    </View>
-  )
-}
-
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
