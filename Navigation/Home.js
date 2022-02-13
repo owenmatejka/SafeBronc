@@ -33,12 +33,12 @@ module.exports = () => {
               <Text style={styles.rTitle}> Panic:</Text>
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.bodyText}>Want to alert everyone of a creeper?
-                  Use this feature to send a text to all registered
-                  individuals at an event!{"\n"}</Text>
+                  <Text style={styles.bodyText}>Feel unsafe and want to alert the event organizers?
+                  Use this feature to send an panic text to
+                  all of the event organizers!{"\n"}</Text>
                 </View>
               </View>
-                <Text style={styles.rTitle}> Events:</Text>
+                <Text style={styles.rTitle}> Events: [WORK IN PROGRESS] </Text>
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
                   <Text style={styles.bodyText}>Register for an event here!{"\n"}</Text>
