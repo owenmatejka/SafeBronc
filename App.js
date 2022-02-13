@@ -9,6 +9,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 HomeScreen = require('./Navigation/Home');
 ResourceScreen = require('./Navigation/Resources');
 PanicScreen = require('./Navigation/Panic');
+EventScreen = require('./Navigation/Events');
 
 const Tab = createBottomTabNavigator();
 
@@ -50,6 +51,10 @@ export default function App() {
         <Tab.Screen
         name = "Panic"
         component = {PanicScreen}
+        />
+        <Tab.Screen
+        name = "Events"
+        component = {EventScreen}
         />
       </Tab.Navigator>
     </NavigationContainer>
