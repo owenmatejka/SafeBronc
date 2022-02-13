@@ -17,7 +17,8 @@ module.exports = () => {
             <ScrollView>
             <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.bodyText}>See below for a guide to our features!{"\n"}</Text>
+                  <Text style={styles.bodyText}>Our goal is to help keep our fellow Broncos safe! 
+                  {"\n"}{"\n"}See below for a guide to our features.{"\n"}</Text>
                 </View>
               </View>
 

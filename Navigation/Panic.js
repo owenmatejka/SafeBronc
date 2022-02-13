@@ -98,7 +98,7 @@ module.exports = () => {
     container: {
       flex: 1,
       margin: 10,
-      marginTop: 120,
+      marginTop: 100,
       padding: 30,
       justifyContent: 'center',
       alignItems: 'center',
@@ -110,7 +110,7 @@ module.exports = () => {
       alignItems: 'center',
       backgroundColor: '#cb4e4e',
       padding: 10,
-      marginTop: 80,
+      marginTop: 60,
       borderRadius: 100,
       shadowColor: 'red',
       shadowOpacity: 0.8,
@@ -127,7 +127,10 @@ module.exports = () => {
     },
     textStyle: {
       textAlign: 'center',
-      fontSize: 16,
       paddingVertical: 16,
+      fontSize: 20,
+      paddingLeft: 10,
+      fontFamily: 'Avenir',
+      fontWeight: '600',
     },
   });
