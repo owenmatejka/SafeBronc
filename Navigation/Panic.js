@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const handlerLongClick = () => {
   //handler for Long Click
-  Alert.alert("Are you sure?","You're about to send out a creep alert!",
+  Alert.alert("Are you sure?","You're about to send out a panic alert!",
   [
     {
       text: "Cancel",
@@ -29,7 +29,7 @@ const handlerLongClick = () => {
 };
 
 let continueRun = false; // Checks to see if button still is pressed
-async function runProgressWheel () {
+async function runDelay () {
   const currentDate = new Date()  
   const startTime = Math.round(currentDate.getTime())
 
@@ -60,7 +60,7 @@ module.exports = () => {
 
     }).start();
     continueRun = true;
-    runProgressWheel();
+    runDelay();
   };
   
   const onPressOut = () => {
@@ -76,7 +76,7 @@ module.exports = () => {
     
       <View style={styles.container}>
           <Text style={styles.textStyle}>
-            See a Creeper? Press and Hold Button for 3 Seconds
+            Do you feel uncomfortable or in danger? Press and hold the panic button for 3 Seconds to alert the event organizers to come and assist.
           </Text>
         <Animated.View style={[styles.buttonStyle, {transform: [{scale}]}]}>
           <TouchableOpacity

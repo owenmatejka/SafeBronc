@@ -3,6 +3,8 @@ import * as React from  'react';
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar } from 'expo-status-bar';
+import phoneNumbers from '../Config/fakeNumbers.json'
+
 
 module.exports = () => {
     return (
@@ -20,19 +22,19 @@ module.exports = () => {
               <Text style={styles.rTitle}> Campus Resources:</Text>
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Main Office</Text>
+                  <Text style={styles.pTitle}>CSS Main Office</Text>
                   <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+14085544441'); }}>(408)-554-4441</Text>
                 </View>
               </View>
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Emergency</Text>
+                  <Text style={styles.pTitle}>CSS Emergency</Text>
                   <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+14085544444'); }}>(408)-554-4444</Text>
                 </View>
               </View>
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Email</Text>
+                  <Text style={styles.pTitle}>CSS Email</Text>
                   <Text style={styles.pNumber} onPress={() => { Linking.openURL('mailto:campussafety@scu.edu'); }}>campussafety@scu.edu</Text>
                 </View>
               </View>
@@ -44,7 +46,7 @@ module.exports = () => {
               </View>
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Santa Clara Police Department</Text>
+                  <Text style={styles.pTitle}>Santa Clara Police Department (Non-Emergency)</Text>
                   <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+14086154700'); }}>(408)-615-4700{"\n"}</Text>
                 </View>
               </View>
@@ -54,36 +56,36 @@ module.exports = () => {
               <View style={styles.rContainer}>
                 <Image source={require("../assets/theta.png")} style={styles.pIcon}></Image>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Theta - Katie Hassett</Text>
-                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+16025252382'); }}>(602)-525-2382</Text>
+                  <Text style={styles.pTitle}>Theta - {phoneNumbers["Theta"][0]}</Text>
+                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+' + phoneNumbers["Theta"][1]); }}>{phoneNumbers["Theta"][2]}</Text>
                 </View>
               </View>
               <View style={styles.rContainer}>
                 <Image source={require("../assets/kappa.png")} style={styles.pIcon}></Image>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Kappa - Luisa Southworth</Text>
-                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+16193007948'); }}>(619)-300-7948</Text>
+                  <Text style={styles.pTitle}>Kappa - {phoneNumbers["Kappa"][0]}</Text>
+                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+' + phoneNumbers["Kappa"][1]); }}>{phoneNumbers["Kappa"][2]}</Text>
                 </View>
               </View>
               <View style={styles.rContainer}>
                 <Image source={require("../assets/dGamma.jpg")} style={styles.pIcon}></Image>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Delta Gamma - Cat Le</Text>
-                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+14087690729'); }}>(408)-769-0729</Text>
+                  <Text style={styles.pTitle}>Delta Gamma - {phoneNumbers["DG"][0]}</Text>
+                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+' + phoneNumbers["DG"][1]); }}>{phoneNumbers["DG"][2]}</Text>
                 </View>
               </View>
               <View style={styles.rContainer}>
                 <Image source={require("../assets/aPhi.png")} style={styles.pIcon}></Image>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Alpha Phi - Sallyanne Tejan</Text>
-                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+12145323462'); }}>(214)-532-3462</Text>
+                  <Text style={styles.pTitle}>Alpha Phi - {phoneNumbers["APhi"][0]}</Text>
+                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+' + phoneNumbers["APhi"][1]); }}>{phoneNumbers["APhi"][2]}</Text>
                 </View>
               </View>
               <View style={styles.rContainer}>
                 <Image source={require("../assets/adpi.png")} style={styles.pIconA}></Image>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <Text style={styles.pTitle}>Alpha Delta Pi - Sarah Sporn</Text>
-                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+17148125201'); }}>(714)-812-5201</Text>
+                  <Text style={styles.pTitle}>Alpha Delta Pi - {phoneNumbers["ADPi"][0]}</Text>
+                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+' + phoneNumbers["ADPi"][1]); }}>{phoneNumbers["ADPi"][2]}</Text>
                 </View>
               </View>
             </ScrollView>
