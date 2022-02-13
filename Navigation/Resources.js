@@ -45,7 +45,7 @@ module.exports = () => {
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
                   <Text style={styles.pTitle}>Santa Clara Police Department</Text>
-                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+14086154700'); }}>(408)-615-4700</Text>
+                  <Text style={styles.pNumber} onPress={() => { Linking.openURL('tel:+14086154700'); }}>(408)-615-4700{"\n"}</Text>
                 </View>
               </View>
     

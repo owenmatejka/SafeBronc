@@ -1,6 +1,5 @@
 import { Animated, StyleSheet, TouchableOpacity, Button, Alert, Text, View } from 'react-native';
 import React, { useState, useCallback, useRef } from "react";
-import AnimatedProgressWheel from 'react-native-progress-wheel';
 
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -25,7 +24,6 @@ const handlerLongClick = () => {
           name: 'Owen',
         })
       });
-      console.log('sent!')
     } } //Add backend event handler here
   ]);
 };
