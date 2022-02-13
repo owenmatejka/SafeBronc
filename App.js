@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 HomeScreen = require('./Navigation/Home');
 ResourceScreen = require('./Navigation/Resources');
+PanicScreen = require('./Navigation/Panic');
 
 const Tab = createBottomTabNavigator();
 
@@ -24,6 +25,10 @@ export default function App() {
         <Tab.Screen
         name = "Resources"
         component = {ResourceScreen}
+        />
+        <Tab.Screen
+        name = "Panic"
+        component = {PanicScreen}
         />
       </Tab.Navigator>
     </NavigationContainer>

@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 module.exports = () => {
     return (
         <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Panicy</Text>
+          <Text>Panic</Text>
         </View>
       )
 }
