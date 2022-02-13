@@ -1,7 +1,9 @@
 import { Animated, StyleSheet, TouchableOpacity, Button, Alert, Text, View } from 'react-native';
 import React, { useState, useCallback, useRef } from "react";
+
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 
 
 module.exports = () => {
@@ -12,13 +14,15 @@ module.exports = () => {
   const scale = animation.interpolate({inputRange, outputRange});
 
   const onPressIn = () => {
-    Animated.spring(animation, {
+    Animated.timing(animation, {
       toValue: .5,
       useNativeDriver: true,
+
     }).start();
   };
+  
   const onPressOut = () => {
-    Animated.spring(animation, {
+    Animated.timing(animation, {
       toValue: 0,
       useNativeDriver: true,
     }).start();
@@ -29,7 +33,7 @@ module.exports = () => {
 
   const handlerLongClick = () => {
     //handler for Long Click
-    Alert.alert("Send Out Creep Alert","Are you sure?",
+    Alert.alert("Are you sure?","You're about to send out a creep alert!",
     [
       {
         text: "Cancel",
@@ -54,9 +58,8 @@ module.exports = () => {
             delayLongPress={2500}
             onLongPress={handlerLongClick}
             //Here is the trick
-          style={styles.btn}
           activeOpacity={1}
-          hitSlop={{top: 25, bottom: 25, left: 55, right: 55}}
+          hitSlop={{top: 65, bottom: 65, left: 55, right: 55}}
           onPressIn={onPressIn}
           onPressOut={onPressOut}>
           <Text style={styles.buttonTextStyle}>Panic Button</Text>
@@ -65,11 +68,12 @@ module.exports = () => {
       </View>
   );
 }
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
       margin: 10,
-      marginTop: -80,
+      marginTop: 100,
       padding: 30,
       justifyContent: 'center',
       alignItems: 'center',
@@ -81,18 +85,15 @@ module.exports = () => {
       alignItems: 'center',
       backgroundColor: '#cb4e4e',
       padding: 10,
-      marginTop: 20,
+      marginTop: 50,
       borderRadius: 100,
       shadowColor: 'red',
       shadowOpacity: 0.8,
       shadowRadius: 15 ,
       shadowOffset : { width: 1, height: 13},
+      
     },
-    btn: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
+
     buttonTextStyle: {
       color: '#fff',
       textAlign: 'center',
