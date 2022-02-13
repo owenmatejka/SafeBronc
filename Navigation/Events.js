@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback } from 'react';
-import { View, TextInput, StyleSheet, Button } from 'react-native';
+import { Text, View, TextInput, StyleSheet, Button } from 'react-native';
 import { useForm } from 'react-hook-form';
 
 import { NavigationContainer } from '@react-navigation/native'
@@ -23,12 +23,16 @@ module.exports = () => {
     register('firstname');
     register('lastname');
     register('eventID');
+    register('phonenumber');
   }, [register]);
 
 
   
     return (
     <View style={styles.container}>
+      <Text style={styles.textStyle}>
+        Register for an Event!
+      </Text>
       <TextInput
         style={styles.input}
         placeholder="First Name"
@@ -40,10 +44,17 @@ module.exports = () => {
         placeholder="Last Name"
         onChangeText={onChangeField('lastname')}
       />
+
       
       <TextInput
         style={styles.input}
-        placeholder="event ID"
+        placeholder="Phone Number"
+        onChangeText={onChangeField('phonenumber')}
+      />
+      
+      <TextInput
+        style={styles.input}
+        placeholder="Event ID"
         onChangeText={onChangeField('eventID')}
       />
 
@@ -69,5 +80,14 @@ const styles = StyleSheet.create({
       margin: 12,
       borderWidth: 1,
       padding: 10,
+    },
+    textStyle: {
+      textAlign: 'center',
+      paddingVertical: 16,
+      fontSize: 20,
+      paddingLeft: 10,
+      fontFamily: 'Avenir',
+      fontWeight: '600',
+      color:'#9b2226',
     },
 });

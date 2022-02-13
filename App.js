@@ -36,8 +36,14 @@ export default function App() {
               ? 'alert-octagon'
               : 'alert-octagon-outline'
               return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
-          }          
-        },
+          } else if (route.name === 'Events') {
+            iconName = focused
+              ? 'events'
+              : 'events-outline';
+              return <Ionicons name="people-outline" size={size} color={color} />;
+        }
+      },
+
         tabBarActiveTintColor: 'maroon',
       })}>
         <Tab.Screen

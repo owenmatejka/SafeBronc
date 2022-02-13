@@ -34,7 +34,7 @@ module.exports = () => {
               <View style={styles.rContainer}>
                 <View style={{ alignItems: 'flex-start', justifyContent: 'center' }}>
                   <Text style={styles.bodyText}>Want to alert everyone of a creeper?
-                  Use this function to send a text to all registered
+                  Use this feature to send a text to all registered
                   individuals at an event!{"\n"}</Text>
                 </View>
               </View>
