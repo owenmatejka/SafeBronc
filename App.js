@@ -18,6 +18,7 @@ export default function App() {
       <Tab.Navigator
       initialRouteName = "Home"
       screenOptions={({ route }) => ({
+        headerShown: false,
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
